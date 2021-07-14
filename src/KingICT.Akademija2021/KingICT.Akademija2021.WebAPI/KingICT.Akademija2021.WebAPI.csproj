@@ -1,0 +1,19 @@
+<Project Sdk="Microsoft.NET.Sdk.Web">
+
+  <PropertyGroup>
+    <TargetFramework>net5.0</TargetFramework>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <PackageReference Include="Microsoft.AspNetCore.Mvc.Versioning" Version="5.0.0" />
+    <PackageReference Include="Microsoft.EntityFrameworkCore.SqlServer" Version="5.0.8" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\KingICT.Akademija2021.Configuration\KingICT.Akademija2021.Configuration.csproj" />
+    <ProjectReference Include="..\KingICT.Akademija2021.Contract\KingICT.Akademija2021.Contract.csproj" />
+    <ProjectReference Include="..\KingICT.Akademija2021.Repository\KingICT.Akademija2021.Repository.csproj" />
+    <ProjectReference Include="..\KingICT.Akademija2021.Service\KingICT.Akademija2021.Service.csproj" />
+  </ItemGroup>
+
+</Project>

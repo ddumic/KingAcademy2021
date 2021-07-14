@@ -1,0 +1,12 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>net5.0</TargetFramework>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\KingICT.Akademija2021.Contract\KingICT.Akademija2021.Contract.csproj" />
+    <ProjectReference Include="..\KingICT.Akademija2021.Model\KingICT.Akademija2021.Model.csproj" />
+  </ItemGroup>
+
+</Project>
