@@ -13,6 +13,6 @@ namespace KingICT.Akademija2021.Model.User
 
 		Task<User> UpdateUserAsync(User user);
 
-		Task<bool> DeleteUserByIdAsync(User id);
+		Task<bool> DeleteUserAsync(User user);
 	}
 }

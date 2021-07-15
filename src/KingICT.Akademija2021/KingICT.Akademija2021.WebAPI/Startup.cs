@@ -1,12 +1,16 @@
 using KingICT.Akademija2021.Configuration;
 using KingICT.Akademija2021.Contract.Academy;
+using KingICT.Akademija2021.Contract.BlogPost;
 using KingICT.Akademija2021.Contract.User;
 using KingICT.Akademija2021.Model.Academy;
+using KingICT.Akademija2021.Model.BlogPost;
 using KingICT.Akademija2021.Model.User;
 using KingICT.Akademija2021.Repository.Academy;
+using KingICT.Akademija2021.Repository.BlogPost;
 using KingICT.Akademija2021.Repository.Common;
 using KingICT.Akademija2021.Repository.User;
 using KingICT.Akademija2021.Service.Academy;
+using KingICT.Akademija2021.Service.BlogPost;
 using KingICT.Akademija2021.Service.User;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
@@ -50,6 +54,8 @@ namespace KingICT.Akademija2021.WebAPI
 			services.AddTransient<IAcademyRepository, AcademyRepository>();
 			services.AddTransient<IUserService, UserService>();
 			services.AddTransient<IUserRepository, UserRepository>();
+			services.AddTransient<IBlogPostService, BlogPostService>();
+			services.AddTransient<IBlogPostRepository, BlogPostRepository>();
 
 			services
 				.AddDbContext<AcademyDbContext>

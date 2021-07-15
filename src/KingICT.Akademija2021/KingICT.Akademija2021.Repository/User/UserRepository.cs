@@ -49,7 +49,7 @@ namespace KingICT.Akademija2021.Repository.User
 			return user;
 		}
 
-		public async Task<bool> DeleteUserByIdAsync(Model.User.User user)
+		public async Task<bool> DeleteUserAsync(Model.User.User user)
 		{
 			_dbContext.Set<Model.User.User>()
 				.Remove(user);

@@ -1,4 +1,5 @@
-﻿using KingICT.Akademija2021.Contract.User;
+﻿using KingICT.Akademija2021.Contract.BlogPost;
+using KingICT.Akademija2021.Contract.User;
 using Microsoft.AspNetCore.Mvc;
 using System;
 using System.Threading.Tasks;
@@ -9,10 +10,12 @@ namespace KingICT.Akademija2021.WebAPI.Controllers
 	public class UserController : ControllerBase
 	{
 		private readonly IUserService _userService;
+		private readonly IBlogPostService _blogPostService;
 
-		public UserController(IUserService userService)
+		public UserController(IUserService userService, IBlogPostService blogPostService)
 		{
 			_userService = userService;
+			_blogPostService = blogPostService;
 		}
 
 		[HttpGet("{id}")]
@@ -25,6 +28,12 @@ namespace KingICT.Akademija2021.WebAPI.Controllers
 		public async Task<IActionResult> GetUsersAsync()
 		{
 			return Ok(await _userService.GetUsersAsync());
+		}
+
+		[HttpGet("{id}/blog-posts")]
+		public async Task<IActionResult> GetUsersBlogPostsByIdAsync([FromRoute] int id)
+		{
+			return Ok(await _blogPostService.GetBlogPostsByUserIdAsync(id));
 		}
 
 

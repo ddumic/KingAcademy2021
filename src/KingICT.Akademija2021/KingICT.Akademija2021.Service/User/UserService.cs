@@ -107,7 +107,7 @@ namespace KingICT.Akademija2021.Service.User
 				throw new ArgumentException(nameof(id));
 			}
 
-			await _userRepository.DeleteUserByIdAsync(user);
+			await _userRepository.DeleteUserAsync(user);
 
 			return true;
 		}

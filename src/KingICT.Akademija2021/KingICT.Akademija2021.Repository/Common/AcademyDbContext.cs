@@ -8,6 +8,8 @@ namespace KingICT.Akademija2021.Repository.Common
 
 		public virtual DbSet<Model.User.User> Users { get; set; }
 
+		public virtual DbSet<Model.BlogPost.BlogPost> BlogPosts { get; set; }
+
 
 		public AcademyDbContext(DbContextOptions<AcademyDbContext> options)
 			: base(options)
