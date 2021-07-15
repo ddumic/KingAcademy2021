@@ -6,6 +6,9 @@ namespace KingICT.Akademija2021.Repository.Common
 	{
 		public virtual DbSet<Model.Academy.Academy> Academies { get; set; }
 
+		public virtual DbSet<Model.User.User> Users { get; set; }
+
+
 		public AcademyDbContext(DbContextOptions<AcademyDbContext> options)
 			: base(options)
 		{
@@ -15,6 +18,5 @@ namespace KingICT.Akademija2021.Repository.Common
 		{
 			modelBuilder.ApplyConfigurationsFromAssembly(typeof(AcademyDbContext).Assembly);
 		}
-
 	}
 }
